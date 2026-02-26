@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - Mini Jumia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="home_page.html" class="logo">🛒 Mini Jumia</a>
+    <a href="cart.html" style="color: white; text-decoration: none;">← Back to Cart</a>
+  </header>
+
+  <main class="container">
+    <form id="checkoutForm" class="checkout-form">
+      <h2>Checkout</h2>
+      
+      <div class="form-group">
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" placeholder="Enter your full name" required />
+        <small class="error" id="errorFullName"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone (Ghana) *</label>
+        <input type="tel" id="phone" placeholder="+233241234567 or 0241234567" required />
+        <small class="error" id="errorPhone"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" placeholder="Enter your email address" required />
+        <small class="error" id="errorEmail"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Delivery Address *</label>
+        <textarea id="address" placeholder="Enter your delivery address" rows="3" required></textarea>
+        <small class="error" id="errorAddress"></small>
+      </div>
+
+      <h3>Delivery Options</h3>
+      <div class="delivery-option">
+        <input type="radio" name="delivery" value="Standard" id="standard-delivery" checked />
+        <label for="standard-delivery">Standard (3-5 days)</label>
+      </div>
+      <div class="delivery-option">
+        <input type="radio" name="delivery" value="Express" id="express-delivery" />
+        <label for="express-delivery">Express (1-2 days)</label>
+      </div>
+
+      <h3>Payment Method</h3>
+      <div class="payment-option">
+        <input type="radio" name="payment" value="COD" id="cod" checked />
+        <label for="cod">Cash on Delivery</label>
+      </div>
+      <div class="payment-option">
+        <input type="radio" name="payment" value="Card" id="card" />
+        <label for="card">Credit/Debit Card</label>
+      </div>
+      <div class="payment-option">
+        <input type="radio" name="payment" value="MobileMoney" id="mobile-money" />
+        <label for="mobile-money">Mobile Money</label>
+      </div>
+
+      <div class="checkout-actions">
+        <button type="submit">Place Order</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="cart.js"></script>
+  <script src="main.js"></script>
+  <script>
+    document.getElementById("checkoutForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const fullName = document.getElementById("fullName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const delivery = document.querySelector('input[name="delivery"]:checked').value;
+      const payment = document.querySelector('input[name="payment"]:checked').value;
+
+      let valid = true;
+
+      if (!fullName) {
+        document.getElementById("errorFullName").textContent = "Full name is required.";
+        valid = false;
+      } else document.getElementById("errorFullName").textContent = "";
+
+      if (!phone || !/^(\+233|0)[23456789]\d{8}$/.test(phone)) {
+        document.getElementById("errorPhone").textContent = "Enter a valid Ghanaian phone number.";
+        valid = false;
+      } else document.getElementById("errorPhone").textContent = "";
+
+      if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+        document.getElementById("errorEmail").textContent = "Enter a valid email.";
+        valid = false;
+      } else document.getElementById("errorEmail").textContent = "";
+
+      if (!address) {
+        document.getElementById("errorAddress").textContent = "Address is required.";
+        valid = false;
+      } else document.getElementById("errorAddress").textContent = "";
+
+      if (valid) {
+        const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+        const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+        const order = {
+          id: `ORD-${Date.now()}`,
+          date: new Date().toISOString(),
+          items: cart,
+          total: parseFloat(total.toFixed(2)),
+          delivery,
+          payment,
+          status: "Pending",
+          customer: { fullName, phone, email, address }
+        };
+
+        let orders = JSON.parse(localStorage.getItem("orders") || "[]");
+        orders.push(order);
+        localStorage.setItem("orders", JSON.stringify(orders));
+        localStorage.removeItem("cart");
+
+        alert("✅ Order placed successfully!");
+        window.location.href = "orders.html";
+      }
+    });
+  </script>
+</body>
+</html>

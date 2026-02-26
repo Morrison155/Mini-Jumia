@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping Cart - Mini Jumia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="home_page.html" class="logo">🛒 Mini Jumia</a>
+    <nav>
+      <a href="home_page.html">Home</a>
+      <a href="orders.html">Orders</a>
+      <a href="admin.html">⚙️ Admin</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+    <div class="header-controls">
+      <button class="theme-toggle" onclick="toggleTheme()">
+        <span id="themeIcon">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Shopping Cart</h2>
+    <div class="cart-container" style="display: flex; flex-direction: column; gap: 20px;">
+      <div id="cartItems" style="background: var(--bg-secondary); padding: 20px; border-radius: 8px;">
+        <!-- Cart items injected here -->
+      </div>
+
+      <div class="cart-summary" style="background: var(--bg-secondary); padding: 20px; border-radius: 8px; text-align: right;">
+        <h3>Total: <span id="totalAmount">₵0.00</span></h3>
+        <button class="btn" onclick="clearCart()" style="background: #666; margin-right: 10px;">Clear Cart</button>
+        <a href="checkout.html" class="btn">Proceed to Checkout</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="cart.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

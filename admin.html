@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel - Mini Jumia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <a href="home_page.html" class="logo">⚙️ Admin Panel</a>
+    <nav>
+      <a href="home_page.html">Store</a>
+      <a href="orders.html">Orders</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <main class="container admin-container">
+    <div id="loginForm" class="admin-section">
+      <h2>Admin Login</h2>
+      <div class="form-group">
+        <input type="password" id="adminPassword" placeholder="Enter admin password" />
+      </div>
+      <button class="btn" onclick="login()">Login</button>
+      <p id="loginError" class="login-error"></p>
+    </div>
+
+    <div id="adminPanel" class="admin-section admin-panel-hidden">
+      <h2>Product Management</h2>
+      <button class="btn" onclick="showAddProductForm()">Add New Product</button>
+      
+      <div id="addProductForm" class="add-product-form">
+        <h3>Add Product</h3>
+        <div class="form-group">
+          <label>Product Name</label>
+          <input type="text" id="newProductName" placeholder="Product Name" />
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <select id="newProductCategory">
+            <option value="Phones">Phones</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Home & Kitchen">Home & Kitchen</option>
+            <option value="Beauty & Personal Care">Beauty & Personal Care</option>
+            <option value="Sports & Outdoors">Sports & Outdoors</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Price (₵)</label>
+          <input type="number" id="newProductPrice" placeholder="Price" />
+        </div>
+        <div class="form-group">
+          <label>Old Price (₵)</label>
+          <input type="number" id="newProductOldPrice" placeholder="Old Price" />
+        </div>
+        <div class="form-group">
+          <label>Image URL</label>
+          <input type="text" id="newProductImage" placeholder="Image URL" />
+        </div>
+        <button class="btn" onclick="addProduct()">Add Product</button>
+      </div>
+
+      <div id="productsList" class="admin-products-list"></div>
+
+      <h2 style="margin-top: 40px;">Order Management</h2>
+      <div id="ordersListAdmin" class="admin-orders-list"></div>
+    </div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="cart.js"></script>
+  <script src="main.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
