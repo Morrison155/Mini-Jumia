@@ -11,7 +11,7 @@ const PRODUCTS = [
     price: 3299,
     oldPrice: 3599,
     discount: 8,
-    image: "https://images.unsplash.com/photo-1610945265078-386f35d9d2e7?w=400&h=400&fit=crop",
+    image: "https://www.google.com/imgres?q=15%20pro%20max&imgurl=https%3A%2F%2Fcdn.mos.cms.futurecdn.net%2FhgaVb9brq7aUN8S3mmWQwQ.jpg&imgrefurl=https%3A%2F%2Fwww.t3.com%2Freviews%2Fapple-iphone-15-pro-max-review&docid=CgiMYmwRd3ecDM&tbnid=yMKHyV7gXthOMM&vet=12ahUKEwj8jI-OtfeSAxU09gIHHc6vIbAQnPAOegQIIxAB..i&w=1920&h=1080&hcb=2&ved=2ahUKEwj8jI-OtfeSAxU09gIHHc6vIbAQnPAOegQIIxAB",
     rating: 4.8,
     description: "Latest Samsung flagship with AI camera features and 5G connectivity."
   },
