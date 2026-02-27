@@ -11,7 +11,7 @@ const PRODUCTS = [
     price: 3299,
     oldPrice: 3599,
     discount: 8,
-    image: "https://www.google.com/imgres?q=15%20pro%20max&imgurl=https%3A%2F%2Fcdn.mos.cms.futurecdn.net%2FhgaVb9brq7aUN8S3mmWQwQ.jpg&imgrefurl=https%3A%2F%2Fwww.t3.com%2Freviews%2Fapple-iphone-15-pro-max-review&docid=CgiMYmwRd3ecDM&tbnid=yMKHyV7gXthOMM&vet=12ahUKEwj8jI-OtfeSAxU09gIHHc6vIbAQnPAOegQIIxAB..i&w=1920&h=1080&hcb=2&ved=2ahUKEwj8jI-OtfeSAxU09gIHHc6vIbAQnPAOegQIIxAB",
+    image: "images/shopping.avif",
     rating: 4.8,
     description: "Latest Samsung flagship with AI camera features and 5G connectivity."
   },
@@ -22,7 +22,7 @@ const PRODUCTS = [
     price: 4599,
     oldPrice: 4799,
     discount: 4,
-    image: "https://images.unsplash.com/photo-1696446701796-da61225697cc?w=400&h=400&fit=crop",
+    image: "images/shopping (1).avif",
     rating: 4.9,
     description: "Titanium design, A17 Pro chip, Action button."
   },
@@ -33,7 +33,7 @@ const PRODUCTS = [
     price: 180,
     oldPrice: 220,
     discount: 18,
-    image: "https://images.unsplash.com/photo-1604176354202-2ac5ba9b0aa4?w=400&h=400&fit=crop",
+    image: "images/download.jfif",
     rating: 4.5,
     description: "Authentic Ghanaian Kente fabric dress with modern styling."
   },
@@ -44,7 +44,7 @@ const PRODUCTS = [
     price: 299,
     oldPrice: 399,
     discount: 25,
-    image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+    image: "images/shopping (2).avif",
     rating: 4.3,
     description: "Noise cancelling over-ear headphones with 30-hour battery life."
   },
@@ -55,7 +55,7 @@ const PRODUCTS = [
     price: 15,
     oldPrice: 20,
     discount: 25,
-    image: "https://images.unsplash.com/photo-1546094096-0df4bcaaa337?w=400&h=400&fit=crop",
+    image: "images/330px-Tomato_je.jpg",
     rating: 4.7,
     description: "Farm fresh tomatoes delivered same day."
   },
@@ -66,7 +66,7 @@ const PRODUCTS = [
     price: 450,
     oldPrice: 520,
     discount: 13,
-    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+    image: "images/s-l960.webp",
     rating: 4.6,
     description: "Comfortable running shoes with air cushioning."
   },
@@ -77,7 +77,7 @@ const PRODUCTS = [
     price: 2199,
     oldPrice: 2499,
     discount: 12,
-    image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&h=400&fit=crop",
+    image: "images/315K4EA.jpg",
     rating: 4.4,
     description: "15.6-inch FHD display, Intel i5, 8GB RAM, 256GB SSD."
   },
@@ -88,8 +88,7 @@ const PRODUCTS = [
     price: 25,
     oldPrice: 30,
     discount: 17,
-    image: "https://images.unsplash.com/photo-1599489034198-246e8c1e2e9f?w=400&h=400&fit=crop",
-    rating: 4.8,
+    image: "images/images.jfif",
     description: "100% Ghanaian cocoa in 50g bars."
   },
   {
@@ -110,7 +109,7 @@ const PRODUCTS = [
     price: 89,
     oldPrice: 120,
     discount: 26,
-    image: "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=400&fit=crop",
+    image: "images/shopping (3).avif",
     rating: 4.2,
     description: "Breathable linen shirt perfect for tropical weather."
   },
@@ -121,7 +120,7 @@ const PRODUCTS = [
     price: 145,
     oldPrice: 165,
     discount: 12,
-    image: "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400&h=400&fit=crop",
+    image: "images/images (1).jfif",
     rating: 4.9,
     description: "Stage 1 infant formula. Pediatrician recommended."
   },
@@ -132,7 +131,7 @@ const PRODUCTS = [
     price: 120,
     oldPrice: 150,
     discount: 20,
-    image: "https://images.unsplash.com/photo-1574944985070-8f3ebc6b79d2?w=400&h=400&fit=crop",
+    image: "images/61liDz9uZWL._AC_UF1000,1000_QL80_.jpg",
     rating: 4.4,
     description: "Fast charging power bank with dual USB ports."
   },
@@ -143,7 +142,7 @@ const PRODUCTS = [
     price: 350,
     oldPrice: 400,
     discount: 12,
-    image: "https://images.unsplash.com/photo-1568901346717-fd18c465992c?w=400&h=400&fit=crop",
+    image: "images/715Sdi8YZeL._AC_SL1000__.jpg",
     rating: 4.1,
     description: "Powerful 1000W blender perfect for smoothies."
   },
@@ -154,7 +153,7 @@ const PRODUCTS = [
     price: 45,
     oldPrice: 55,
     discount: 18,
-    image: "https://images.unsplash.com/photo-1620234582150-3b560672317e?w=400&h=400&fit=crop",
+    image: "images/Ghanas-Pure-Shea-Butter-19.4oz.webp",
     rating: 4.9,
     description: "Unrefined, 100% pure shea butter."
   },
@@ -165,7 +164,7 @@ const PRODUCTS = [
     price: 55,
     oldPrice: 75,
     discount: 26,
-    image: "https://images.unsplash.com/photo-1619078641525-60e44c815f56?w=400&h=400&fit=crop",
+    image: "images/3cd7cd20-80e0-41b5-8dd1-fbce4dcd45e522261000.webp",
     rating: 4.0,
     description: "Comfortable replacement strap for smartwatches."
   },
@@ -176,7 +175,7 @@ const PRODUCTS = [
     price: 99,
     oldPrice: 150,
     discount: 34,
-    image: "https://images.unsplash.com/photo-1558328014-d439a037c7b8?w=400&h=400&fit=crop",
+    image: "images/shopping (3).avif",
     rating: 4.3,
     description: "Genuine leather bi-fold wallet."
   },
@@ -187,7 +186,7 @@ const PRODUCTS = [
     price: 75,
     oldPrice: 80,
     discount: 6,
-    image: "https://images.unsplash.com/photo-1518577915817-39d798e3960a?w=400&h=400&fit=crop",
+    image: "images/images (2).jfif",
     rating: 4.5,
     description: "Refined vegetable cooking oil."
   },
@@ -198,7 +197,7 @@ const PRODUCTS = [
     price: 110,
     oldPrice: 130,
     discount: 15,
-    image: "https://images.unsplash.com/photo-1528647293990-9710e07e43e4?w=400&h=400&fit=crop",
+    image: "images/images (3).jfif",
     rating: 4.7,
     description: "Energy-saving LED lamp with flexible neck."
   },
@@ -209,7 +208,7 @@ const PRODUCTS = [
     price: 650,
     oldPrice: 750,
     discount: 13,
-    image: "https://images.unsplash.com/photo-1543286386-d4134e5b524f?w=400&h=400&fit=crop",
+    image: "images/shopping (4).avif",
     rating: 4.6,
     description: "Educational tablet for ages 4-8."
   },
@@ -220,7 +219,7 @@ const PRODUCTS = [
     price: 58,
     oldPrice: 65,
     discount: 10,
-    image: "https://images.unsplash.com/photo-1587974051439-927d36f70c5f?w=400&h=400&fit=crop",
+    image: "images/images (4).jfif",
     rating: 4.8,
     description: "Deep moisturizing conditioner for natural hair."
   },
@@ -231,7 +230,7 @@ const PRODUCTS = [
     price: 35,
     oldPrice: 45,
     discount: 22,
-    image: "https://images.unsplash.com/photo-1591538358530-3d373d2658c8?w=400&h=400&fit=crop",
+    image: "images/64221846b0d4eb6a2c11fbee-ghana-shirt-men-ghana-flag-shirt-women.jpg",
     rating: 4.4,
     description: "High-quality cotton t-shirt with Ghana flag."
   },
@@ -242,7 +241,7 @@ const PRODUCTS = [
     price: 28,
     oldPrice: 32,
     discount: 12,
-    image: "https://images.unsplash.com/photo-1578195987063-2b073d91c65a?w=400&h=400&fit=crop",
+    image: "images/images (5).jfif",
     rating: 4.2,
     description: "Packed in sunflower oil. Great source of protein."
   },
@@ -253,7 +252,7 @@ const PRODUCTS = [
     price: 65,
     oldPrice: 90,
     discount: 27,
-    image: "https://images.unsplash.com/photo-1587879203882-f03513323341?w=400&h=400&fit=crop",
+    image: "images/1.jpg",
     rating: 4.5,
     description: "Accurate digital scale for baking."
   },
@@ -264,7 +263,7 @@ const PRODUCTS = [
     price: 130,
     oldPrice: 180,
     discount: 28,
-    image: "https://images.unsplash.com/photo-1541534741688-6035a3efa348?w=400&h=400&fit=crop",
+    image: "images/ALPIDEX-Yogamatte-Extra-Dick-1-5-cm-Gymnastikmatte-3-Verschiedene-Groessen-16496.jpg",
     rating: 4.7,
     description: "Non-slip, extra thick yoga mat."
   }
